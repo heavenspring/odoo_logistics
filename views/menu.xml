@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="物流" id="logistics_root" />
+
+    <menuitem name="档案管理" id="archives_firstmenu" parent="logistics_root" sequence="1"/>
+    <menuitem name="货运" id="freight_secondmenu" parent="archives_firstmenu"/>
+    <menuitem name="客户分类管理" id="khflgl_thirdmenu" parent="freight_secondmenu" action="waybill_action"/>
+    <menuitem name="包装方式" id="bzfs_thirdmenu" parent="freight_secondmenu" action="waybill_action"/>
+    <menuitem name="货物档案" id="hwda_thirdmenu" parent="freight_secondmenu" action="waybill_action"/>
+    <menuitem name="保价费率" id="bjfl_thirdmenu" parent="freight_secondmenu" action="waybill_action"/>
+    <menuitem name="往来" id="dealings_secondmenu" parent="archives_firstmenu"/>
+    <menuitem name="运力分类管理" id="ylflgl_thirdmenu" parent="dealings_secondmenu" action="waybill_action"/>
+    <menuitem name="承运合同管理" id="cyhtgl_thirdmenu" parent="dealings_secondmenu" action="waybill_action"/>
+    <menuitem name="合作单位管理" id="hzdwgl_thirdmenu" parent="dealings_secondmenu" action="waybill_action"/>
+    <menuitem name="目的地名管理" id="mddmgl_thirdmenu" parent="dealings_secondmenu" action="waybill_action"/>
+    <menuitem name="内部" id="internal_secondmenu" parent="archives_firstmenu"/>
+    <menuitem name="内部公告管理" id="nbgggl_thirdmenu" parent="internal_secondmenu" action="waybill_action"/>
+    <menuitem name="部门职员设置" id="bmzysz_thirdmenu" parent="internal_secondmenu" action="waybill_action"/>
+    <menuitem name="异地网点配置" id="ydwdpz_thirdmenu" parent="internal_secondmenu" action="waybill_action"/>
+    <menuitem name="会计科目设置" id="kjkmsz_thirdmenu" parent="internal_secondmenu" action="waybill_action"/>
+
+    <menuitem name="物流管理" id="logistics_firstmenu" parent="logistics_root" sequence="2"/>
+    <menuitem name="始发站" id="start_secondmenu" parent="logistics_firstmenu" sequence="1"/>
+    <menuitem name="导入外部运单" id="drwbyd_thirdmenu" parent="start_secondmenu" action="waybill_action"/>
+    <menuitem name="货物托运凭证" id="hwtypz_thirdmenu" parent="start_secondmenu" action="waybill_action"/>
+    <menuitem name="简单接货受理" id="jdjhsl_thirdmenu" parent="start_secondmenu" action="waybill_action"/>
+    <menuitem name="标准接货受理" id="bzjhsl_thirdmenu" parent="start_secondmenu" action="waybill_action"/>
+    <menuitem name="承运装车发运" id="cyzcfy_thirdmenu" parent="start_secondmenu" action="waybill_action"/>
+    <menuitem name="派工到门接货" id="pgdmjh_thirdmenu" parent="start_secondmenu" action="waybill_action"/>
+    <menuitem name="目的站" id="destination_secondmenu" parent="logistics_firstmenu" sequence="2"/>
+    <menuitem name="承运车辆到达" id="cycldd_thirdmenu" parent="destination_secondmenu" action="waybill_action"/>
+    <menuitem name="自提通知登记" id="zttzdj_thirdmenu" parent="destination_secondmenu" action="waybill_action"/>
+    <menuitem name="派工到门送货" id="pgdmsh_thirdmenu" parent="destination_secondmenu" action="waybill_action"/>
+    <menuitem name="中转物流登记" id="zzwldj_thirdmenu" parent="destination_secondmenu" action="waybill_action"/>
+    <menuitem name="第三方" id="third_secondmenu" parent="logistics_firstmenu" sequence="3"/>
+    <menuitem name="本地中介登记" id="bdzjdj_thirdmenu" parent="third_secondmenu" action="waybill_action"/>
+    <menuitem name="本地中介结算" id="bdzjjs_thirdmenu" parent="third_secondmenu" action="waybill_action"/>
+    <menuitem name="本地外包登记" id="bdwbdj_thirdmenu" parent="third_secondmenu" action="waybill_action"/>
+    <menuitem name="本地外包结算" id="bdwbjs_thirdmenu" parent="third_secondmenu" action="waybill_action"/>
+    <menuitem name="货品控制" id="goods_control_secondmenu" parent="logistics_firstmenu" sequence="4"/>
+    <menuitem name="条码扫描平台" id="tmsmpt_thirdmenu" parent="goods_control_secondmenu" action="waybill_action"/>
+    <menuitem name="货差控制明细" id="hckzmx_thirdmenu" parent="goods_control_secondmenu" action="waybill_action"/>
+    <menuitem name="自定条码打印" id="zdytmdy_thirdmenu" parent="goods_control_secondmenu" action="waybill_action"/>
+
+    <menuitem name="财务结算" id="financial_firstmenu" parent="logistics_root" sequence="3"/>
+    <menuitem name="应收" id="receivable_secondmenu" parent="financial_firstmenu"/>
+    <menuitem name="客户运费结算" id="khyfjs_thirdmenu" parent="receivable_secondmenu" action="waybill_action"/>
+    <menuitem name="其他收入结算" id="qtsrjs_thirdmenu" parent="receivable_secondmenu" action="waybill_action"/>
+    <menuitem name="客户运费变动" id="khyfbd_thirdmenu" parent="receivable_secondmenu" action="waybill_action"/>
+    <menuitem name="应收余额清零" id="ysyeql_thirdmenu" parent="receivable_secondmenu" action="waybill_action"/>
+    <menuitem name="应付" id="payable_secondmenu" parent="financial_firstmenu"/>
+    <menuitem name="司机运费结算" id="sjyfjs_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="车辆报销结算" id="clbxjs_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="垫付运费结算" id="dfyfjs_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="中转费用结算" id="zzfyjs_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="接货费用结算" id="jhfyjs_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="送货费用结算" id="shfyjs_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="其他费用结算" id="qtfyjs_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="货损赔款结算" id="hspkjs_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="业务返款结算" id="ywfkjs_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="司机运费变动" id="sjyfbd_thirdmenu" parent="payable_secondmenu" action="waybill_action"/>
+    <menuitem name="货款" id="payment_secondmenu" parent="financial_firstmenu"/>
+    <menuitem name="代收收取结算" id="dssqjs_thirdmenu" parent="payment_secondmenu" action="waybill_action"/>
+    <menuitem name="代收网点过账" id="dswdgz_thirdmenu" parent="payment_secondmenu" action="waybill_action"/>
+    <menuitem name="代收网点对账" id="dswddz_thirdmenu" parent="payment_secondmenu" action="waybill_action"/>
+    <menuitem name="代收发放结算" id="dsffjs_thirdmenu" parent="payment_secondmenu" action="waybill_action"/>
+    <menuitem name="代收垫付结算" id="dsdfjs_thirdmenu" parent="payment_secondmenu" action="waybill_action"/>
+    <menuitem name="代收货款变动" id="dshkbd_thirdmenu" parent="payment_secondmenu" action="waybill_action"/>
+
+    <menuitem name="登记对账" id="reconciliation_firstmenu" parent="logistics_root" sequence="4"/>
+    <menuitem name="记账" id="accounting_secondmenu" parent="reconciliation_firstmenu"/>
+    <menuitem name="车辆报销登记" id="clbxdj_thirdmenu" parent="accounting_secondmenu" action="waybill_action"/>
+    <menuitem name="其他费用登记" id="qtfydj_thirdmenu" parent="accounting_secondmenu" action="waybill_action"/>
+    <menuitem name="其他收入登记" id="qtsrdj_thirdmenu" parent="accounting_secondmenu" action="waybill_action"/>
+    <menuitem name="资金流向管理" id="zjlxgl_thirdmenu" parent="accounting_secondmenu" action="waybill_action"/>
+    <menuitem name="对账" id="check_secondmenu" parent="reconciliation_firstmenu"/>
+    <menuitem name="应收款催收账" id="yskcsz_thirdmenu" parent="check_secondmenu" action="waybill_action"/>
+    <menuitem name="网点过账" id="wdgz_thirdmenu" parent="check_secondmenu" action="waybill_action"/>
+    <menuitem name="出纳对账" id="cndz_thirdmenu" parent="check_secondmenu" action="waybill_action"/>
+    <menuitem name="财务对账" id="cwdz_thirdmenu" parent="check_secondmenu" action="waybill_action"/>
+
+	<menuitem name="业务统计" id="statistics_firstmenu" parent="logistics_root" sequence="5"/>	
+    <menuitem name="发站存货查询" id="fzchcx_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="到站存货查询" id="dzchcx_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="在途货物查询" id="zthwcx_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="线路统计" id="xltj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="发站统计" id="fztj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="到站统计" id="dztj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="职员统计" id="zytj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="客户统计" id="khtj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="司机统计" id="sjtj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="接货统计" id="jhtj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="送货统计" id="shtj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="中转统计" id="zztj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="车辆报销统计" id="clbxtj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="其他费用统计" id="qtfytj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="其他收入统计" id="qtsrtj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="货物统计" id="hwtj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="中介统计" id="zjtj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	<menuitem name="外包统计" id="wbtj_secondmenu" parent="statistics_firstmenu" action="waybill_action"/>
+	
+	<menuitem name="财务报表" id="report_firstmenu" parent="logistics_root" sequence="6"/>	
+    <menuitem name="总账财务报表" id="zzcwbb_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="资产负债树形表" id="zcfzsxt_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="资产负债平衡表" id="zcfzphb_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="现金银行统计" id="xjyhtj_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="收入统计" id="srtj_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="费用统计" id="fytj_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="利润表" id="lrb_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="日记账" id="rjz_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="明细账" id="mxb_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="日统计" id="rtj_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="客户往来账" id="khwlz_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="司机往来账" id="sjwlz_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="单位往来账" id="dwwlz_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="代收往来账" id="dswlz_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="收支流水账" id="szlsz_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	<menuitem name="收支日报表" id="szrbb_secondmenu" parent="report_firstmenu" action="waybill_action"/>
+	
+</odoo>
