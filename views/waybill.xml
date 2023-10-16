@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 基本增删改 -->
+    <record id="waybill_action" model="ir.actions.act_window">
+        <field name="name">waybill.management</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">waybill</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                create your first one!
+            </p>
+        </field>
+    </record>
+</odoo>
