@@ -2,6 +2,7 @@
 <odoo>
     <!-- 基本增删改 -->
     <record id="waybill_action" model="ir.actions.act_window">
+        <!-- <field name="name">waybill.management</field> -->
         <field name="name">waybill.management</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">waybill</field>
@@ -12,4 +13,142 @@
             </p>
         </field>
     </record>
+
+
+    <!-- Form View -->
+    <record id="waybill_view_form" model="ir.ui.view">
+        <field name="name">waybill.form</field>
+        <field name="model">waybill</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <h1>
+                        <field name="goods_num_auto"/>
+
+                    </h1>
+                    <!-- <h3>
+                        <separator string="发货人/收货人" colspan="4"/>
+                    </h3> -->
+
+                    <group>
+                        <group>
+                            <separator string="发货人信息"/>
+                            <field name="shipper_id"/>
+                            <field name="shipper_tel"/>
+                        </group>
+                        <group>
+                            <separator string="收货人信息"/>
+                            <field name="destination"/>
+                            <field name="receiver_id"/>
+                            <field name="receiver_tel"/>
+                            <field name="receiver_address"/>
+
+                        </group>
+                    </group>
+                    <!-- <h3>
+                        <separator string="其他信息" colspan="4"/>
+                    </h3> -->
+                    <group col="3">
+                        <group>
+                            <separator string="选项信息"/>
+
+                            <field name="servicetype"/>
+                            <field name="paytype"/>
+                        </group>
+                        <group>
+                            <separator string="费用信息"/>
+                            <field name="total_fees"/>
+                            <field name="receiving_fees"/>
+                            <field name="deliver_fees"/>
+                            <field name="substitute_fees"/>
+                            <field name="transfer_fees"/>
+                            <field name="load_unload_fees"/>
+                            <field name="guarantee_fees"/>
+                        </group>
+                        <group>
+                            <separator string="其他信息"/>
+                            <field name="collect_fees"/>
+                            <field name="refund"/>
+                            <field name="status"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="货运单明细">
+                            <field name="detail_ids">
+                                <tree editable="bottom">
+                                    <field name="goods_id"/>
+                                    <field name="package_id"/>
+                                    <field name="unit_price"/>
+                                    <field name="quantity"/>
+                                    <field name="weight"/>
+                                    <field name="volume"/>
+                                    <field name="pricing_mode"/>
+                                    <field name="rates"/>
+                                    <field name="total_freight"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--Tree(List) View-->
+    <record id="waybill_view_tree" model="ir.ui.view">
+        <field name="name">waybill.tree</field>
+        <field name="model">waybill</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="goods_num_auto"/>
+                <field name="shipper_id"/>
+                 <field name="shipper_tel"/>
+                <field name="receiver_id"/>
+                <field name="receiver_tel"/>
+                <field name="destination"/>
+                <field name="total_fees"/>              
+                <field name="create_date"/>               
+                <field name="detail_ids"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--kanban View-->
+    <record id="waybill_view_kanban" model="ir.ui.view">
+        <field name="name">waybill.kanban</field>
+        <field name="model">waybill</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="goods_num_auto"/>
+                <field name="destination"/>
+                <field name="status"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div clasds="oe_kanban_detail">
+                                <ul>
+                                    <li>
+                                        <span >货运单编号:</span>
+                                        <field name="goods_num_auto"/>
+                                    </li>
+                                    <li>
+                                        <field name="destination"/>
+                                    </li>
+                                    <li>
+                                        <field name="status"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+
 </odoo>

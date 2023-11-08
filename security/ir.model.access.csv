@@ -1,2 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_waybill,access.waybill,model_waybill,,1,1,1,1
+access_waybill_detail,access.waybill.detail,model_waybill_detail,,1,1,1,1
+access_goods,access.goods,model_goods,,1,1,1,1
+access_package,access.package,model_package,,1,1,1,1
+access_shipper,access.shipper,model_shipper,,1,1,1,1
+access_receiver,access.receiver,model_receiver,,1,1,1,1
+access_city,access.city,model_city,,1,1,1,1
+access_rate,access.rate,model_rate,,1,1,1,1

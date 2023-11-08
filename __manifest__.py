@@ -1,5 +1,5 @@
 {
-    'name': "Logistics",#模块的标题
+    'name': "物流",#模块的标题
     'summary': "物流",#单行描述的副标题
     'category': 'Productivity',#用于按照兴趣领域组织模块
     'description': """ 物流管理 """,#长描述，通常放在三个引号中，Python中使用三个引号来界定多行文本
