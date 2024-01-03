@@ -1,6 +1,6 @@
 # odoo_logistics 物流管理系统更新日志
 
-##2024-01-03
+## 2024-01-03
 1.加入odoo自带的国际化翻译机制
 
 - 导出模块.po文件
@@ -10,7 +10,7 @@
 [点击阅读原文](https://gardenengineer.club/2024/01/international-translation/ 'Odoo16—国际化翻译')
 
 
-##2023-12-20
+## 2023-12-20
 1.引入odoo框架自带的权限控制机制
 
 - 用户组分类
