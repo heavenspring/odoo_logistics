@@ -6,7 +6,7 @@ class Rate(models.Model):
     _description = 'Rate'
     _rec_name = "rate_value"
 
-    rate_value=fields.Float(string="费率",default=0)
+    rate_value=fields.Float(string="Rate",default=0)
 
 
     @api.constrains('rate_value')
@@ -14,5 +14,5 @@ class Rate(models.Model):
         for record in self:
             # 检查是否有其他记录具有相同的名称
             if self.search_count([('rate_value', '=', record.rate_value)]) > 1:
-                raise ValidationError("费率重复")
+                raise ValidationError("Rate duplication")
 

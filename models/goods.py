@@ -6,7 +6,7 @@ class Goods(models.Model):
     _description = 'Goods'
     _rec_name = "goods_name"
 
-    goods_name = fields.Char(string='货物名称', required=True)
+    goods_name = fields.Char(string='Goods Name', required=True)
 
 
     @api.constrains('goods_name')
@@ -14,4 +14,4 @@ class Goods(models.Model):
         for record in self:
             # 检查是否有其他记录具有相同的名称
             if self.search_count([('goods_name', '=', record.goods_name)]) > 1:
-                raise ValidationError("货物名称重复")
+                raise ValidationError("Duplicate goods name")

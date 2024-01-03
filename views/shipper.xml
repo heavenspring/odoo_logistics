@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- window_action -->
+    <record id="shipper_action" model="ir.actions.act_window">
+        <field name="name">shipper.management</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">shipper</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                create your first one!
+            </p>
+        </field>
+    </record>
+    <!-- Form View -->
+    <record id="shipper_view_form" model="ir.ui.view">
+        <field name="name">shipper.form</field>
+        <field name="model">shipper</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="shipper_name"/>
+                        <field name="tel"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--Tree(List) View-->
+    <record id="shipper_view_tree" model="ir.ui.view">
+        <field name="name">shipper.tree</field>
+        <field name="model">shipper</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="shipper_name"/>
+                <field name="tel"/>
+            </tree>
+        </field>
+    </record>
+    <!--kanban View-->
+    <record id="shipper_view_kanban" model="ir.ui.view">
+        <field name="name">shipper.kanban</field>
+        <field name="model">shipper</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="shipper_name"/>
+                <field name="tel"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div clasds="oe_kanban_detail">
+                                <ul>
+                                    <li>
+                                        <field name="shipper_name"/>
+                                    </li>
+                                    <li>
+                                        <field name="tel"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+</odoo>
