@@ -1,990 +1,497 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* odoo-logistics
+# 	* odoo_logistics
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0-20230810\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-02 22:38+0000\n"
-"PO-Revision-Date: 2023-11-02 22:38+0000\n"
+"POT-Creation-Date: 2024-01-02 07:06+0000\n"
+"PO-Revision-Date: 2024-01-02 18:55+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"X-Generator: Poedit 3.2.2\n"
 
-#. module: odoo-logistics
-#: model_terms:ir.ui.view,arch_db:odoo-logistics.waybill_view_kanban
-msgid "<span>货运单编号:</span>"
-msgstr ""
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_kanban
+msgid "<span>Waybill Number:</span>"
+msgstr "<span>货运单编号：</span>"
 
-#. module: odoo-logistics
-#: model:ir.model,name:odoo-logistics.model_city
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver__address
+msgid "Address"
+msgstr "收货地址"
+
+#. module: odoo_logistics
+#: model:res.groups,name:odoo_logistics.groups_logistic_manager
+msgid "Administrator"
+msgstr "管理员"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__substitute_fees
+msgid "Advance Payment Fee"
+msgstr "垫付费"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__collect_fees
+msgid "Agency Fund"
+msgstr "代收款"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__status__5
+msgid "Arrived"
+msgstr "已到达"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill_detail__pricing_mode__1
+msgid "By Unit Price"
+msgstr "按单价"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill_detail__pricing_mode__3
+msgid "By Volume"
+msgstr "按体积"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill_detail__pricing_mode__2
+msgid "By Weight"
+msgstr "按重量"
+
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_city
 msgid "City"
-msgstr ""
+msgstr "城市"
 
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_city__create_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_goods__create_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_package__create_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_rate__create_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver__create_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_shipper__create_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__create_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__create_uid
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_city__city_name
+msgid "City Name"
+msgstr "城市名称"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__receiver_id
+msgid "Consignee"
+msgstr "收货人"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__receiver_address
+msgid "Consignee Address"
+msgstr "收货人地址"
+
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Consignee Information"
+msgstr "收货人信息"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver__receiver_name
+msgid "Consignee Name"
+msgstr "收货人名称"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__receiver_tel
+msgid "Consignee Phone"
+msgstr "收货人电话"
+
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Cost Information"
+msgstr "费用信息"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_city__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_goods__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_package__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_rate__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipper__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "创建人"
 
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_city__create_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_goods__create_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_package__create_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_rate__create_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver__create_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_shipper__create_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__create_date
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_city__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_goods__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_package__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_rate__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipper__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__create_date
 msgid "Created on"
-msgstr ""
+msgstr "创建时间"
 
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_city__display_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_goods__display_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_package__display_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_rate__display_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver__display_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_shipper__display_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__display_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__display_name
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__deliver_fees
+msgid "Delivery Charges"
+msgstr "送货费"
+
+#. module: odoo_logistics
+#: model:ir.ui.menu,name:odoo_logistics.departure_station_secondmenu
+msgid "Departure Station"
+msgstr "始发站"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__destination
+msgid "Destination"
+msgstr "目的站"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_city__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_goods__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_package__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_rate__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipper__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "显示名称"
 
-#. module: odoo-logistics
-#: model:ir.model,name:odoo-logistics.model_goods
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__waybill_id
+msgid "Freight Information"
+msgstr "货运信息"
+
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_goods
 msgid "Goods"
-msgstr ""
+msgstr "货物"
 
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_city__id
-#: model:ir.model.fields,field_description:odoo-logistics.field_goods__id
-#: model:ir.model.fields,field_description:odoo-logistics.field_package__id
-#: model:ir.model.fields,field_description:odoo-logistics.field_rate__id
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver__id
-#: model:ir.model.fields,field_description:odoo-logistics.field_shipper__id
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__id
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__id
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_goods__goods_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__goods_id
+msgid "Goods Name"
+msgstr "货物名称"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__load_unload_fees
+msgid "Handling Cost"
+msgstr "装卸费"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__status__6
+msgid "Have Been Signed"
+msgstr "已签收"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_city__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_goods__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_package__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_rate__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipper__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_city____last_update
-#: model:ir.model.fields,field_description:odoo-logistics.field_goods____last_update
-#: model:ir.model.fields,field_description:odoo-logistics.field_package____last_update
-#: model:ir.model.fields,field_description:odoo-logistics.field_rate____last_update
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver____last_update
-#: model:ir.model.fields,field_description:odoo-logistics.field_shipper____last_update
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill____last_update
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail____last_update
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__status__4
+msgid "In Transit"
+msgstr "运输中"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_city____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_goods____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_package____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_rate____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipper____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "最后修改时间"
 
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_city__write_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_goods__write_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_package__write_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_rate__write_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver__write_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_shipper__write_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__write_uid
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__write_uid
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_city__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_goods__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_package__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_rate__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipper__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "最后更新人"
 
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_city__write_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_goods__write_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_package__write_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_rate__write_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver__write_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_shipper__write_date
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__write_date
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_city__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_goods__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_package__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_rate__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipper__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "最后更新时间"
 
-#. module: odoo-logistics
-#: model:ir.model,name:odoo-logistics.model_package
+#. module: odoo_logistics
+#: model:ir.ui.menu,name:odoo_logistics.logistics_root
+msgid "Logistics"
+msgstr "物流"
+
+#. module: odoo_logistics
+#: model:ir.module.category,name:odoo_logistics.category_custom_logistic
+#: model:ir.ui.menu,name:odoo_logistics.logistics_firstmenu
+msgid "Logistics Management"
+msgstr "物流管理"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__paytype__3
+msgid "Monthly Settlement"
+msgstr "月结"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__quantity
+msgid "Number"
+msgstr "数量"
+
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Option information"
+msgstr "选项信息"
+
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Other Information"
+msgstr "其他信息"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__servicetype__3
+msgid "Outsource"
+msgstr "外包"
+
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_package
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__package_id
 msgid "Package"
-msgstr ""
+msgstr "包装"
 
-#. module: odoo-logistics
-#: model:ir.model,name:odoo-logistics.model_rate
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_package__package_name
+msgid "Packaging Name"
+msgstr "包装名称"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__paytype__1
+msgid "Pay As You Go"
+msgstr "现付"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__paytype
+msgid "Payment Type"
+msgstr "付款方式"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__paytype__2
+msgid "Payment Upon Arrival"
+msgstr "到付"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_receiver__tel
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipper__tel
+msgid "Phone"
+msgstr "电话"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__receiving_fees
+msgid "Pickup Fee"
+msgstr "接货费"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__pricing_mode
+msgid "Pricing Mode"
+msgstr "计价方式"
+
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_rate
+#: model:ir.model.fields,field_description:odoo_logistics.field_rate__rate_value
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__rates
 msgid "Rate"
-msgstr ""
+msgstr "费率"
 
-#. module: odoo-logistics
-#: model:ir.model,name:odoo-logistics.model_receiver
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_receiver
 msgid "Receiver"
-msgstr ""
+msgstr "收货人"
 
-#. module: odoo-logistics
-#: model:ir.model,name:odoo-logistics.model_shipper
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__refund
+msgid "Refund"
+msgstr "返款"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__goods_num
+msgid "Self Numbering"
+msgstr "自编号"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__servicetype
+msgid "Service Type"
+msgstr "服务方式"
+
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_shipper
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__shipper_id
 msgid "Shipper"
-msgstr ""
+msgstr "发货人"
 
-#. module: odoo-logistics
-#: model:ir.model,name:odoo-logistics.model_waybill
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Shipper Information"
+msgstr "发货人信息"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipper__shipper_name
+msgid "Shipper Name"
+msgstr "发货人名称"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__shipper_tel
+msgid "Shipper Phone"
+msgstr "发货人电话"
+
+#. module: odoo_logistics
+#: model:res.groups,name:odoo_logistics.groups_logistic_user
+msgid "Staff"
+msgstr "员工"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__servicetype__1
+msgid "Station To Station"
+msgstr "站到站"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__guarantee_fees
+msgid "Storage Fee"
+msgstr "保管费"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__status__1
+msgid "To Be Received"
+msgstr "待收货"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__status__3
+msgid "To Be Sent"
+msgstr "待发货"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__status__2
+msgid "To Be Shipped"
+msgstr "待装运"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__total_fees
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__total_freight
+msgid "Total Freight"
+msgstr "运费合计"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__servicetype__2
+msgid "Transfer"
+msgstr "中转"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__transfer_fees
+msgid "Transfer Fee"
+msgstr "中转费"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__unit_price
+msgid "Unit Price"
+msgstr "单价"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__volume
+msgid "Volume"
+msgstr "体积"
+
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_waybill
 msgid "Waybill"
-msgstr ""
+msgstr "运单"
 
-#. module: odoo-logistics
-#: model:ir.model,name:odoo-logistics.model_waybill_detail
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_waybill_detail
 msgid "Waybill Detail"
-msgstr ""
+msgstr "运单明细"
 
-#. module: odoo-logistics
-#: model_terms:ir.actions.act_window,help:odoo-logistics.waybill_action
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__detail_ids
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Waybill Details"
+msgstr "货运单明细"
+
+#. module: odoo_logistics
+#: model:ir.ui.menu,name:odoo_logistics.drwbyd_thirdmenu
+msgid "Waybill Management"
+msgstr "运单管理"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__goods_num_auto
+msgid "Waybill Number"
+msgstr "货运单编号"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__status
+msgid "Waybill Status"
+msgstr "运单状态"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__weight
+msgid "Weight"
+msgstr "重量"
+
+#. module: odoo_logistics
+#: model:ir.actions.act_window,name:odoo_logistics.city_action
+msgid "city.management"
+msgstr "城市管理"
+
+#. module: odoo_logistics
+#: model_terms:ir.actions.act_window,help:odoo_logistics.city_action
+#: model_terms:ir.actions.act_window,help:odoo_logistics.goods_action
+#: model_terms:ir.actions.act_window,help:odoo_logistics.package_action
+#: model_terms:ir.actions.act_window,help:odoo_logistics.rate_action
+#: model_terms:ir.actions.act_window,help:odoo_logistics.receiver_action
+#: model_terms:ir.actions.act_window,help:odoo_logistics.shipper_action
+#: model_terms:ir.actions.act_window,help:odoo_logistics.waybill_action
 msgid "create your first one!"
-msgstr "创建一条新数据！"
+msgstr "创建第一条数据！"
 
-#. module: odoo-logistics
-#: model:ir.actions.act_window,name:odoo-logistics.waybill_action
+#. module: odoo_logistics
+#: model:ir.actions.act_window,name:odoo_logistics.goods_action
+msgid "goods.management"
+msgstr "货物管理"
+
+#. module: odoo_logistics
+#: model:ir.actions.act_window,name:odoo_logistics.package_action
+msgid "package.management"
+msgstr "包装管理"
+
+#. module: odoo_logistics
+#: model:ir.actions.act_window,name:odoo_logistics.rate_action
+msgid "rate.management"
+msgstr "费率管理"
+
+#. module: odoo_logistics
+#: model:ir.actions.act_window,name:odoo_logistics.receiver_action
+msgid "receiver.management"
+msgstr "发货人管理"
+
+#. module: odoo_logistics
+#: model:ir.actions.act_window,name:odoo_logistics.shipper_action
+msgid "shipper.management"
+msgstr "收货人管理"
+
+#. module: odoo_logistics
+#: model:ir.actions.act_window,name:odoo_logistics.waybill_action
 msgid "waybill.management"
-msgstr "货运管理"
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.statistics_firstmenu
-msgid "业务统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.ywfkjs_thirdmenu
-msgid "业务返款结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zjtj_secondmenu
-msgid "中介统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__servicetype__2
-msgid "中转"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zzwldj_thirdmenu
-msgid "中转物流登记"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zztj_secondmenu
-msgid "中转统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__transfer_fees
-msgid "中转费"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zzfyjs_thirdmenu
-msgid "中转费用结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__paytype
-msgid "付款方式"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dsffjs_thirdmenu
-msgid "代收发放结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dsdfjs_thirdmenu
-msgid "代收垫付结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dswlz_secondmenu
-msgid "代收往来账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dssqjs_thirdmenu
-msgid "代收收取结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__collect_fees
-msgid "代收款"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dswddz_thirdmenu
-msgid "代收网点对账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dswdgz_thirdmenu
-msgid "代收网点过账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dshkbd_thirdmenu
-msgid "代收货款变动"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.kjkmsz_thirdmenu
-msgid "会计科目设置"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__volume
-msgid "体积"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.bjfl_thirdmenu
-msgid "保价费率"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__guarantee_fees
-msgid "保管费"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__write_date
-msgid "修改时间"
-msgstr ""
-
-#. module: odoo-logistics
-#: model_terms:ir.ui.view,arch_db:odoo-logistics.waybill_view_form
-msgid "其他信息"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.qtsrdj_thirdmenu
-msgid "其他收入登记"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.qtsrjs_thirdmenu
-msgid "其他收入结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.qtsrtj_secondmenu
-msgid "其他收入统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.qtfydj_thirdmenu
-msgid "其他费用登记"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.qtfyjs_thirdmenu
-msgid "其他费用结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.qtfytj_secondmenu
-msgid "其他费用统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.internal_secondmenu
-msgid "内部"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.nbgggl_thirdmenu
-msgid "内部公告管理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.cndz_thirdmenu
-msgid "出纳对账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__create_date
-msgid "创建时间"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.lrb_secondmenu
-msgid "利润表"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__paytype__2
-msgid "到付"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dzchcx_secondmenu
-msgid "到站存货查询"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dztj_secondmenu
-msgid "到站统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__package_id
-msgid "包装"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.bzfs_thirdmenu
-msgid "包装方式"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__unit_price
-msgid "单价"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dwwlz_secondmenu
-msgid "单位往来账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.fzchcx_secondmenu
-msgid "发站存货查询"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.fztj_secondmenu
-msgid "发站统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_shipper__shipper_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__shipper_id
-msgid "发货人"
-msgstr ""
-
-#. module: odoo-logistics
-#: model_terms:ir.ui.view,arch_db:odoo-logistics.waybill_view_form
-msgid "发货人信息"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__shipper_tel
-msgid "发货人电话"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.sjwlz_secondmenu
-msgid "司机往来账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.sjtj_secondmenu
-msgid "司机统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.sjyfbd_thirdmenu
-msgid "司机运费变动"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.sjyfjs_thirdmenu
-msgid "司机运费结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.hzdwgl_thirdmenu
-msgid "合作单位管理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zthwcx_secondmenu
-msgid "在途货物查询"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__substitute_fees
-msgid "垫付费"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dfyfjs_thirdmenu
-msgid "垫付运费结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_city__city_name
-msgid "城市名称"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__servicetype__3
-msgid "外包"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.wbtj_secondmenu
-msgid "外包统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.start_secondmenu
-msgid "始发站"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.khflgl_thirdmenu
-msgid "客户分类管理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.khwlz_secondmenu
-msgid "客户往来账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.khtj_secondmenu
-msgid "客户统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.khyfbd_thirdmenu
-msgid "客户运费变动"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.khyfjs_thirdmenu
-msgid "客户运费结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.check_secondmenu
-msgid "对账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.drwbyd_thirdmenu
-msgid "导入外部运单"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__status__5
-msgid "已到达"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__status__6
-msgid "已签收"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.payable_secondmenu
-msgid "应付"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.receivable_secondmenu
-msgid "应收"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.ysyeql_thirdmenu
-msgid "应收余额清零"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.yskcsz_thirdmenu
-msgid "应收款催收账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.ydwdpz_thirdmenu
-msgid "异地网点配置"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.dealings_secondmenu
-msgid "往来"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__status__3
-msgid "待发货"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__status__1
-msgid "待收货"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__status__2
-msgid "待装运"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zzcwbb_secondmenu
-msgid "总账财务报表"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__total_fees
-msgid "总运费"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.cyhtgl_thirdmenu
-msgid "承运合同管理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.cyzcfy_thirdmenu
-msgid "承运装车发运"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.cycldd_thirdmenu
-msgid "承运车辆到达"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill_detail__pricing_mode__3
-msgid "按体积"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill_detail__pricing_mode__1
-msgid "按单价"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill_detail__pricing_mode__2
-msgid "按重量"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.jhtj_secondmenu
-msgid "接货统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__receiving_fees
-msgid "接货费"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.jhfyjs_thirdmenu
-msgid "接货费用结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.srtj_secondmenu
-msgid "收入统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.szrbb_secondmenu
-msgid "收支日报表"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.szlsz_secondmenu
-msgid "收支流水账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver__receiver_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__receiver_id
-msgid "收货人"
-msgstr ""
-
-#. module: odoo-logistics
-#: model_terms:ir.ui.view,arch_db:odoo-logistics.waybill_view_form
-msgid "收货人信息"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__receiver_address
-msgid "收货人地址"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__receiver_tel
-msgid "收货人电话"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver__address
-msgid "收货地址"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__quantity
-msgid "数量"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.rtj_secondmenu
-msgid "日统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.rjz_secondmenu
-msgid "日记账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.mxb_secondmenu
-msgid "明细账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__paytype__3
-msgid "月结"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__servicetype
-msgid "服务方式"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.bdzjdj_thirdmenu
-msgid "本地中介登记"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.bdzjjs_thirdmenu
-msgid "本地中介结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.bdwbdj_thirdmenu
-msgid "本地外包登记"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.bdwbjs_thirdmenu
-msgid "本地外包结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.tmsmpt_thirdmenu
-msgid "条码扫描平台"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.bzjhsl_thirdmenu
-msgid "标准接货受理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.archives_firstmenu
-msgid "档案管理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.pgdmjh_thirdmenu
-msgid "派工到门接货"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.pgdmsh_thirdmenu
-msgid "派工到门送货"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.logistics_root
-msgid "物流"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.logistics_firstmenu
-msgid "物流管理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__paytype__1
-msgid "现付"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.xjyhtj_secondmenu
-msgid "现金银行统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_receiver__tel
-#: model:ir.model.fields,field_description:odoo-logistics.field_shipper__tel
-msgid "电话"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.reconciliation_firstmenu
-msgid "登记对账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.mddmgl_thirdmenu
-msgid "目的地名管理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__destination
-#: model:ir.ui.menu,name:odoo-logistics.destination_secondmenu
-msgid "目的站"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__servicetype__1
-msgid "站到站"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.third_secondmenu
-msgid "第三方"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.jdjhsl_thirdmenu
-msgid "简单接货受理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.xltj_secondmenu
-msgid "线路统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.wdgz_thirdmenu
-msgid "网点过账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zytj_secondmenu
-msgid "职员统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zdytmdy_thirdmenu
-msgid "自定条码打印"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zttzdj_thirdmenu
-msgid "自提通知登记"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__goods_num
-msgid "自编号"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__load_unload_fees
-msgid "装卸费"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__pricing_mode
-msgid "计价方式"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.accounting_secondmenu
-msgid "记账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.cwdz_thirdmenu
-msgid "财务对账"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.report_firstmenu
-msgid "财务报表"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.financial_firstmenu
-msgid "财务结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.goods_control_secondmenu
-msgid "货品控制"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.hckzmx_thirdmenu
-msgid "货差控制明细"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.hspkjs_thirdmenu
-msgid "货损赔款结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.payment_secondmenu
-msgid "货款"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_goods__goods_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_package__package_name
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__goods_id
-msgid "货物名称"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.hwtypz_thirdmenu
-msgid "货物托运凭证"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.hwda_thirdmenu
-msgid "货物档案"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.hwtj_secondmenu
-msgid "货物统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.freight_secondmenu
-msgid "货运"
-msgstr ""
-
-#. module: odoo-logistics
-#: model_terms:ir.ui.view,arch_db:odoo-logistics.waybill_view_form
-msgid "货运单明细"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__goods_num_auto
-msgid "货运单编号"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__detail_ids
-msgid "货运明细"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__waybill_id
-msgid "货运表"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_rate__rate_value
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__rates
-msgid "费率"
-msgstr ""
-
-#. module: odoo-logistics
-#: model_terms:ir.ui.view,arch_db:odoo-logistics.waybill_view_form
-msgid "费用信息"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.fytj_secondmenu
-msgid "费用统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zcfzphb_secondmenu
-msgid "资产负债平衡表"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zcfzsxt_secondmenu
-msgid "资产负债树形表"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.zjlxgl_thirdmenu
-msgid "资金流向管理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.clbxdj_thirdmenu
-msgid "车辆报销登记"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.clbxjs_thirdmenu
-msgid "车辆报销结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.clbxtj_secondmenu
-msgid "车辆报销统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.ylflgl_thirdmenu
-msgid "运力分类管理"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__status
-msgid "运单状态"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__total_freight
-msgid "运费合计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields.selection,name:odoo-logistics.selection__waybill__status__4
-msgid "运输中"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__refund
-msgid "返款"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.shtj_secondmenu
-msgid "送货统计"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill__deliver_fees
-msgid "送货费"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.shfyjs_thirdmenu
-msgid "送货费用结算"
-msgstr ""
-
-#. module: odoo-logistics
-#: model_terms:ir.ui.view,arch_db:odoo-logistics.waybill_view_form
-msgid "选项信息"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.ui.menu,name:odoo-logistics.bmzysz_thirdmenu
-msgid "部门职员设置"
-msgstr ""
-
-#. module: odoo-logistics
-#: model:ir.model.fields,field_description:odoo-logistics.field_waybill_detail__weight
-msgid "重量"
-msgstr ""
+msgstr "运单管理"

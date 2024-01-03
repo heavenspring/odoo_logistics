@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <!-- 基本增删改 -->
+    <!-- window_action -->
     <record id="waybill_action" model="ir.actions.act_window">
-        <!-- <field name="name">waybill.management</field> -->
         <field name="name">waybill.management</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">waybill</field>
@@ -22,23 +21,17 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-
                     <h1>
                         <field name="goods_num_auto"/>
-
                     </h1>
-                    <!-- <h3>
-                        <separator string="发货人/收货人" colspan="4"/>
-                    </h3> -->
-
                     <group>
                         <group>
-                            <separator string="发货人信息"/>
+                            <separator string="Shipper Information"/>
                             <field name="shipper_id"/>
                             <field name="shipper_tel"/>
                         </group>
                         <group>
-                            <separator string="收货人信息"/>
+                            <separator string="Consignee Information"/>
                             <field name="destination"/>
                             <field name="receiver_id"/>
                             <field name="receiver_tel"/>
@@ -46,18 +39,15 @@
 
                         </group>
                     </group>
-                    <!-- <h3>
-                        <separator string="其他信息" colspan="4"/>
-                    </h3> -->
                     <group col="3">
                         <group>
-                            <separator string="选项信息"/>
+                            <separator string="Option information"/>
 
                             <field name="servicetype"/>
                             <field name="paytype"/>
                         </group>
                         <group>
-                            <separator string="费用信息"/>
+                            <separator string="Cost Information"/>
                             <field name="total_fees"/>
                             <field name="receiving_fees"/>
                             <field name="deliver_fees"/>
@@ -67,14 +57,14 @@
                             <field name="guarantee_fees"/>
                         </group>
                         <group>
-                            <separator string="其他信息"/>
+                            <separator string="Other Information"/>
                             <field name="collect_fees"/>
                             <field name="refund"/>
                             <field name="status"/>
                         </group>
                     </group>
                     <notebook>
-                        <page string="货运单明细">
+                        <page string="Waybill Details">
                             <field name="detail_ids">
                                 <tree editable="bottom">
                                     <field name="goods_id"/>
@@ -131,7 +121,7 @@
                             <div clasds="oe_kanban_detail">
                                 <ul>
                                     <li>
-                                        <span >货运单编号:</span>
+                                        <span >Waybill Number:</span>
                                         <field name="goods_num_auto"/>
                                     </li>
                                     <li>

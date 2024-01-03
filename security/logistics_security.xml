@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="category_custom_logistic" model="ir.module.category">
+        <field name="name">Logistics Management</field>        <!--用户组分类名称-->
+        <field name="sequence">1</field>        <!--组分类显示顺序、优先级-->
+    </record>
+    <record id="groups_logistic_manager" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="category_custom_logistic"/>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        <!--为用户组添加管理员用户 -->
+    </record>
+    <record id="groups_logistic_user" model="res.groups">
+        <field name="name">Staff</field>
+        <field name="category_id" ref="category_custom_logistic"/>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        <!--为用户组添加管理员用户 -->
+    </record>
+</odoo>
