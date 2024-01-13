@@ -4,3 +4,5 @@ from . import package
 from . import customer
 from . import city
 from . import rate
+from . import driver
+from . import shipping_document

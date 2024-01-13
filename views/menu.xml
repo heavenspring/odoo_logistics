@@ -23,7 +23,8 @@
 
     <menuitem name="Logistics Management" id="logistics_firstmenu" parent="logistics_root" sequence="2"/>
     <menuitem name="Departure Station" id="departure_station_secondmenu" parent="logistics_firstmenu" sequence="1"/>
-    <menuitem name="Waybill Management" id="drwbyd_thirdmenu" parent="departure_station_secondmenu" action="waybill_action"/>
+    <menuitem name="Waybill Management" id="ydgl_thirdmenu" parent="departure_station_secondmenu" action="waybill_action"/>
+    <menuitem name="Shipping Document Management" id="cygl_thirdmenu" parent="departure_station_secondmenu" action="shipping_document_action"/>
     <!-- <menuitem name="货物托运凭证" id="hwtypz_thirdmenu" parent="start_secondmenu" action="waybill_action"/>
     <menuitem name="简单接货受理" id="jdjhsl_thirdmenu" parent="start_secondmenu" action="waybill_action"/>
     <menuitem name="标准接货受理" id="bzjhsl_thirdmenu" parent="start_secondmenu" action="waybill_action"/>

@@ -15,3 +15,9 @@ access_city_manager,access.city.manager,model_city,groups_logistic_manager,1,1,1
 access_city_user,access.city.user,model_city,groups_logistic_user,1,1,1,0
 access_rate_manager,access.rate.manager,model_rate,groups_logistic_manager,1,1,1,1
 access_rate_user,access.rate.user,model_rate,groups_logistic_user,1,0,0,0
+access_driver_manager,access.driver.manager,model_driver,groups_logistic_manager,1,1,1,1
+access_driver_user,access.driver.user,model_driver,groups_logistic_user,1,1,1,0
+access_shipping_document_manager,access.shipping.document.manager,model_shipping_document,groups_logistic_manager,1,1,1,1
+access_shipping_document_user,access.shipping.document.user,model_shipping_document,groups_logistic_user,1,1,1,0
+access_shipping_document_detail_manager,access.shipping.document.detail.manager,model_shipping_document_detail,groups_logistic_manager,1,1,1,1
+access_shipping_document_detail_user,access.shipping.document.detail.user,model_shipping_document_detail,groups_logistic_user,1,1,1,0

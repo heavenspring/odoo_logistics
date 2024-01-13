@@ -16,4 +16,11 @@
         <field name="users" eval="[(4, ref('base.user_admin'))]"/>
         <!--为用户组添加管理员用户 -->
     </record>
+
+
+    <record id="waybill_comp_rule" model="ir.rule">
+        <field name="name">Waybill multi company rule</field>
+        <field name="model_id" ref="model_waybill"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
 </odoo>
