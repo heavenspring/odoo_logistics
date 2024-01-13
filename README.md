@@ -34,7 +34,7 @@
 [点击阅读原文](https://gardenengineer.club/2024/01/international-translation/ 'Odoo16—国际化翻译')
 
 
-##2023-12-20
+## 2023-12-20
 1.引入odoo框架自带的权限控制机制
 
 - 用户组分类
