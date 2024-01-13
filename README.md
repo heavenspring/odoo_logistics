@@ -1,6 +1,6 @@
 # odoo_logistics 物流管理系统更新日志
 
-##备注信息
+## 备注信息
 - 在线访问：[http://wuliu.gardenengineer.club/](http://wuliu.gardenengineer.club/ '在线预览') 账号：wuliu@163.com 密码：123456
 - QQ交流群：567961463
 - 操作说明：[https://gardenengineer.club/docs-category/logistic/](https://gardenengineer.club/docs-category/logistic/ '操作说明')
@@ -9,7 +9,7 @@
  ![image.png](static/images/QRcode.jpg)
 
 
-##2024-01-13
+## 2024-01-13
 1.运单管理模块完善
 
 - 多公司及中转机制
@@ -24,7 +24,7 @@
 - 单据状态及审核机制
 
  ![image.png](static/images/chengyun.gif)
-##2024-01-03
+## 2024-01-03
 1.加入odoo自带的国际化翻译机制
 
 - 导出模块.po文件
