@@ -6,21 +6,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0-20230810\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-02 07:06+0000\n"
-"PO-Revision-Date: 2024-01-02 18:55+0800\n"
+"POT-Creation-Date: 2024-01-12 14:21+0000\n"
+"PO-Revision-Date: 2024-01-12 14:21+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 3.2.2\n"
+
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.shipping_document_view_kanban
+msgid "<span>Shipping Number:</span>"
+msgstr "<span>承运单号：</span>"
 
 #. module: odoo_logistics
 #: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_kanban
 msgid "<span>Waybill Number:</span>"
-msgstr "<span>货运单编号：</span>"
+msgstr "<span>货运单号：</span>"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_receiver__address
@@ -43,9 +46,26 @@ msgid "Agency Fund"
 msgstr "代收款"
 
 #. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.shipping_document_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Are you sure you want to cancel confirm this record?"
+msgstr "确认取消审核？"
+
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.shipping_document_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Are you sure you want to confirm this record?"
+msgstr "确认审核？"
+
+#. module: odoo_logistics
 #: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__status__5
 msgid "Arrived"
 msgstr "已到达"
+
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.shipping_document_view_form
+msgid "Basic Information"
+msgstr "基础信息"
 
 #. module: odoo_logistics
 #: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill_detail__pricing_mode__1
@@ -63,6 +83,12 @@ msgid "By Weight"
 msgstr "按重量"
 
 #. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.shipping_document_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Cancel Confirm"
+msgstr "取消审核"
+
+#. module: odoo_logistics
 #: model:ir.model,name:odoo_logistics.model_city
 msgid "City"
 msgstr "城市"
@@ -73,6 +99,25 @@ msgid "City Name"
 msgstr "城市名称"
 
 #. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__company_id
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.shipping_document_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
+msgid "Confirm"
+msgstr "审核"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__shipping_document__state__2
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__state__2
+msgid "Confirmed"
+msgstr "已审核"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__receiver_id
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__receiver_id
 msgid "Consignee"
 msgstr "收货人"
@@ -93,22 +138,27 @@ msgid "Consignee Name"
 msgstr "收货人名称"
 
 #. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__receiver_tel
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__receiver_tel
 msgid "Consignee Phone"
 msgstr "收货人电话"
 
 #. module: odoo_logistics
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.shipping_document_view_form
 #: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
 msgid "Cost Information"
 msgstr "费用信息"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_city__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_driver__create_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_goods__create_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_package__create_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_rate__create_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_receiver__create_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_shipper__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__create_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__create_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__create_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__create_uid
 msgid "Created by"
@@ -116,11 +166,15 @@ msgstr "创建人"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_city__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_driver__create_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_goods__create_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_package__create_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_rate__create_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_receiver__create_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_shipper__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__create_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__waybill_create_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__create_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__create_date
 msgid "Created on"
@@ -137,21 +191,43 @@ msgid "Departure Station"
 msgstr "始发站"
 
 #. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__destination
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__destination_id
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__destination
 msgid "Destination"
 msgstr "目的站"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_city__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_driver__display_name
 #: model:ir.model.fields,field_description:odoo_logistics.field_goods__display_name
 #: model:ir.model.fields,field_description:odoo_logistics.field_package__display_name
 #: model:ir.model.fields,field_description:odoo_logistics.field_rate__display_name
 #: model:ir.model.fields,field_description:odoo_logistics.field_receiver__display_name
 #: model:ir.model.fields,field_description:odoo_logistics.field_shipper__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__display_name
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__display_name
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__display_name
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__display_name
 msgid "Display Name"
 msgstr "显示名称"
+
+#. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__shipping_document__state__1
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__state__1
+msgid "Draft"
+msgstr "草稿"
+
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_driver
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__driver_id
+msgid "Driver"
+msgstr "司机"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_driver__driver_name
+msgid "Driver Name"
+msgstr "司机名称"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__waybill_id
@@ -170,6 +246,11 @@ msgid "Goods Name"
 msgstr "货物名称"
 
 #. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__goods_total_freight
+msgid "Goods Total Freight"
+msgstr "货物总运费"
+
+#. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__load_unload_fees
 msgid "Handling Cost"
 msgstr "装卸费"
@@ -181,15 +262,18 @@ msgstr "已签收"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_city__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_driver__id
 #: model:ir.model.fields,field_description:odoo_logistics.field_goods__id
 #: model:ir.model.fields,field_description:odoo_logistics.field_package__id
 #: model:ir.model.fields,field_description:odoo_logistics.field_rate__id
 #: model:ir.model.fields,field_description:odoo_logistics.field_receiver__id
 #: model:ir.model.fields,field_description:odoo_logistics.field_shipper__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__id
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__id
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__id
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: odoo_logistics
 #: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__status__4
@@ -198,11 +282,14 @@ msgstr "运输中"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_city____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_driver____last_update
 #: model:ir.model.fields,field_description:odoo_logistics.field_goods____last_update
 #: model:ir.model.fields,field_description:odoo_logistics.field_package____last_update
 #: model:ir.model.fields,field_description:odoo_logistics.field_rate____last_update
 #: model:ir.model.fields,field_description:odoo_logistics.field_receiver____last_update
 #: model:ir.model.fields,field_description:odoo_logistics.field_shipper____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document____last_update
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail____last_update
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill____last_update
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail____last_update
 msgid "Last Modified on"
@@ -210,11 +297,14 @@ msgstr "最后修改时间"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_city__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_driver__write_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_goods__write_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_package__write_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_rate__write_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_receiver__write_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_shipper__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__write_uid
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__write_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__write_uid
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__write_uid
 msgid "Last Updated by"
@@ -222,11 +312,14 @@ msgstr "最后更新人"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_city__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_driver__write_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_goods__write_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_package__write_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_rate__write_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_receiver__write_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_shipper__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__write_date
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__write_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__write_date
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__write_date
 msgid "Last Updated on"
@@ -280,6 +373,11 @@ msgid "Packaging Name"
 msgstr "包装名称"
 
 #. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_city__partner_id
+msgid "Partner"
+msgstr "合作伙伴"
+
+#. module: odoo_logistics
 #: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__paytype__1
 msgid "Pay As You Go"
 msgstr "现付"
@@ -304,6 +402,11 @@ msgstr "电话"
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__receiving_fees
 msgid "Pickup Fee"
 msgstr "接货费"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_driver__plate_number
+msgid "Plate Number"
+msgstr "车牌号"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__pricing_mode
@@ -338,6 +441,12 @@ msgid "Service Type"
 msgstr "服务方式"
 
 #. module: odoo_logistics
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__shipping_document__state__3
+#: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__state__3
+msgid "Settled"
+msgstr "已结算"
+
+#. module: odoo_logistics
 #: model:ir.model,name:odoo_logistics.model_shipper
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__shipper_id
 msgid "Shipper"
@@ -359,6 +468,34 @@ msgid "Shipper Phone"
 msgstr "发货人电话"
 
 #. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__shipping_cost
+msgid "Shipping Cost"
+msgstr "运输费用"
+
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_shipping_document
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__shipping_document_id
+msgid "Shipping Document"
+msgstr "承运单"
+
+#. module: odoo_logistics
+#: model:ir.model,name:odoo_logistics.model_shipping_document_detail
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__detail_ids
+#: model_terms:ir.ui.view,arch_db:odoo_logistics.shipping_document_view_form
+msgid "Shipping Document Detail"
+msgstr "承运单明细"
+
+#. module: odoo_logistics
+#: model:ir.ui.menu,name:odoo_logistics.cygl_thirdmenu
+msgid "Shipping Document Management"
+msgstr "承运管理"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__shipping_num_auto
+msgid "Shipping Number"
+msgstr "承运单号"
+
+#. module: odoo_logistics
 #: model:res.groups,name:odoo_logistics.groups_logistic_user
 msgid "Staff"
 msgstr "员工"
@@ -367,6 +504,12 @@ msgstr "员工"
 #: model:ir.model.fields.selection,name:odoo_logistics.selection__waybill__servicetype__1
 msgid "Station To Station"
 msgstr "站到站"
+
+#. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document__state
+#: model:ir.model.fields,field_description:odoo_logistics.field_waybill__state
+msgid "Status"
+msgstr "运单状态"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__guarantee_fees
@@ -389,6 +532,7 @@ msgid "To Be Shipped"
 msgstr "待装运"
 
 #. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__total_fees
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__total_fees
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__total_freight
 msgid "Total Freight"
@@ -410,12 +554,18 @@ msgid "Unit Price"
 msgstr "单价"
 
 #. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__used_waybill_ids
+msgid "Used Waybill"
+msgstr ""
+
+#. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__volume
 msgid "Volume"
 msgstr "体积"
 
 #. module: odoo_logistics
 #: model:ir.model,name:odoo_logistics.model_waybill
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__waybill_id
 msgid "Waybill"
 msgstr "运单"
 
@@ -425,13 +575,14 @@ msgid "Waybill Detail"
 msgstr "运单明细"
 
 #. module: odoo_logistics
+#: model:ir.model.fields,field_description:odoo_logistics.field_shipping_document_detail__detail_ids
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__detail_ids
 #: model_terms:ir.ui.view,arch_db:odoo_logistics.waybill_view_form
 msgid "Waybill Details"
 msgstr "货运单明细"
 
 #. module: odoo_logistics
-#: model:ir.ui.menu,name:odoo_logistics.drwbyd_thirdmenu
+#: model:ir.ui.menu,name:odoo_logistics.ydgl_thirdmenu
 msgid "Waybill Management"
 msgstr "运单管理"
 
@@ -443,7 +594,7 @@ msgstr "货运单编号"
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill__status
 msgid "Waybill Status"
-msgstr "运单状态"
+msgstr "货物状态"
 
 #. module: odoo_logistics
 #: model:ir.model.fields,field_description:odoo_logistics.field_waybill_detail__weight
@@ -457,14 +608,21 @@ msgstr "城市管理"
 
 #. module: odoo_logistics
 #: model_terms:ir.actions.act_window,help:odoo_logistics.city_action
+#: model_terms:ir.actions.act_window,help:odoo_logistics.driver_action
 #: model_terms:ir.actions.act_window,help:odoo_logistics.goods_action
 #: model_terms:ir.actions.act_window,help:odoo_logistics.package_action
 #: model_terms:ir.actions.act_window,help:odoo_logistics.rate_action
 #: model_terms:ir.actions.act_window,help:odoo_logistics.receiver_action
 #: model_terms:ir.actions.act_window,help:odoo_logistics.shipper_action
+#: model_terms:ir.actions.act_window,help:odoo_logistics.shipping_document_action
 #: model_terms:ir.actions.act_window,help:odoo_logistics.waybill_action
 msgid "create your first one!"
 msgstr "创建第一条数据！"
+
+#. module: odoo_logistics
+#: model:ir.actions.act_window,name:odoo_logistics.driver_action
+msgid "driver.management"
+msgstr "司机管理"
 
 #. module: odoo_logistics
 #: model:ir.actions.act_window,name:odoo_logistics.goods_action
@@ -490,6 +648,11 @@ msgstr "发货人管理"
 #: model:ir.actions.act_window,name:odoo_logistics.shipper_action
 msgid "shipper.management"
 msgstr "收货人管理"
+
+#. module: odoo_logistics
+#: model:ir.actions.act_window,name:odoo_logistics.shipping_document_action
+msgid "shipping.document.management"
+msgstr "承运管理"
 
 #. module: odoo_logistics
 #: model:ir.actions.act_window,name:odoo_logistics.waybill_action

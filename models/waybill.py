@@ -2,6 +2,7 @@ from odoo import models, fields, api
 from odoo import tools
 from datetime import datetime, timedelta
 import pytz
+from odoo.exceptions import ValidationError
 
 
 class Waybill(models.Model):
@@ -32,9 +33,13 @@ class Waybill(models.Model):
         record_count = self.search_count(
             [('create_date', '>=', date_start), ('create_date', '<', date_end)])
         return f'HY{local_date.strftime("%Y%m%d")}{record_count + 1:04d}'
+    
+
+
 
     goods_num_auto = fields.Char(
         string='Waybill Number', default=generate_custom_code, readonly=True)
+    company_id = fields.Many2one('res.company', required=True, readonly=True, default=lambda self: self.env.company)
     goods_num = fields.Char(string='Self Numbering')
     destination = fields.Many2one('city', string='Destination', required=True)
     receiver_id = fields.Many2one('receiver', string='Consignee', required=True)
@@ -82,6 +87,25 @@ class Waybill(models.Model):
 
     detail_ids = fields.One2many('waybill.detail', 'waybill_id', string='Waybill Details')
 
+    state = fields.Selection([('1','Draft'),
+                              ('2','Confirmed'),
+                              ('3','Settled')], default='1', string="Status")
+    
+
+    def action_confirm(self):
+        self.state='2'
+
+        
+    def action_cancel(self):
+        self.state = '1'
+
+
+    def unlink(self):
+        for record in self:
+            if record.state in ['2', '3']:
+                raise ValidationError('Cannot delete approved or settled records!')
+        return super().unlink()
+
     # 确保在复制的时候自定义编号数据生效
     def copy(self, default=None):
         if default is None:
@@ -111,7 +135,6 @@ class Waybill(models.Model):
     def name_get(self):
         result = []
         for record in self:
-            # rec_name = "%s[%s %s %s]" % (record.goods_num_auto, record.destination.city_name,record.receiver_id.receiver_name, record.receiver_id.tel)
             rec_name = "%s" % (record.goods_num_auto)
             result.append((record.id, rec_name))
         return result
@@ -120,6 +143,11 @@ class Waybill(models.Model):
     def _compute_total_fees(self):
         for waybill in self:
             waybill.total_fees = sum(waybill.detail_ids.mapped('total_freight'))
+
+
+
+
+
 
 
 class WaybillDetail(models.Model):

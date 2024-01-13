@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- window_action -->
+    <record id="shipping_document_action" model="ir.actions.act_window">
+        <field name="name">shipping.document.management</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">shipping.document</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                create your first one!
+            </p>
+        </field>
+    </record>
+
+
+    <!-- Form View -->
+    <record id="shipping_document_view_form" model="ir.ui.view">
+        <field name="name">shipping.document.form</field>
+        <field name="model">shipping.document</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button id="button_confirm" name="action_confirm" string="Confirm" class="btn-primary" states="1" type="object" confirm="Are you sure you want to confirm this record?"/>
+                    <button id="button_cancel" name="action_cancel" string="Cancel Confirm" class="btn-primary" states="2" type="object" confirm="Are you sure you want to cancel confirm this record?"/>
+                    <field name="state" widget="statusbar" statusbar_visible="1,2,3"/>
+                </header>
+                <sheet>
+                    <h1>
+                        <field name="shipping_num_auto"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <separator string="Basic Information"/>
+                            <field name="destination" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="driver_id" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                        </group>
+                        <group>
+                            <separator string="Cost Information"/>
+                            <field name="shipping_cost" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="goods_total_freight"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Shipping Document Detail">
+                            <field name="detail_ids" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}">
+                                <tree editable="bottom">
+                                    <field name="waybill_id"/>
+                                    <field name="receiver_id"/>
+                                    <field name="receiver_tel"/>
+                                    <field name="waybill_create_date"/>
+                                    <field name="detail_ids"/>
+                                    <field name="total_fees"/>
+                                    <field name="destination_id" invisible="1"/>
+                                    <field name="used_waybill_ids" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!--Tree(List) View-->
+    <record id="shipping_document_view_tree" model="ir.ui.view">
+        <field name="name">shipping.document.tree</field>
+        <field name="model">shipping.document</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="shipping_num_auto"/>
+                <field name="destination"/>
+                <field name="driver_id"/>
+                <field name="create_date"/>
+                <field name="shipping_cost"/>
+                <field name="goods_total_freight"/>
+                <field name="state" decoration-danger="state in ['1']" decoration-warning="state in ['2']" decoration-success="state in ['3']" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--kanban View-->
+    <record id="shipping_document_view_kanban" model="ir.ui.view">
+        <field name="name">shipping.document.kanban</field>
+        <field name="model">shipping.document</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="shipping_num_auto"/>
+                <field name="destination"/>
+                <field name="driver_id"/>
+                <field name="shipping_cost"/>
+                <field name="goods_total_freight"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div clasds="oe_kanban_detail">
+                                <ul>
+                                    <li>
+                                        <span >Shipping Number:</span>
+                                        <field name="shipping_num_auto"/>
+                                    </li>
+                                    <li>
+                                        <field name="destination"/>
+                                    </li>
+                                    <li>
+                                        <field name="driver_id"/>
+                                    </li>
+                                    <li>
+                                        <field name="shipping_cost"/>
+                                    </li>
+                                    <li>
+                                        <field name="goods_total_freight"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+
+    <!-- Form View -->
+    <record id="shipping_document_detail_view_form" model="ir.ui.view">
+        <field name="name">shipping.document.detail</field>
+        <field name="model">shipping.document.detail</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="waybill_id"/>
+                        <field name="receiver_id"/>
+                        <field name="receiver_tel"/>
+                        <field name="waybill_create_date"/>
+                        <!-- <field name="detail_ids"/> -->
+                        <field name="total_fees"/>
+                        <field name="destination_id" invisible="1"/>
+                        <field name="used_waybill_ids" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+</odoo>

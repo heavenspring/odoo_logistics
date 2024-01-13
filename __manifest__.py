@@ -17,6 +17,8 @@
         'views/rate.xml',
         'views/receiver.xml',
         'views/shipper.xml',
+        'views/driver.xml',
+        'views/shipping_document.xml',
         'views/menu.xml'
     ],  # 这是在模块安装或升级时需加载数据文件的相对路径列表。这些路径相对于模块的根目录。通常，这些是XML和CSV文件，但也可以使用YAML格式的数据文件
     'demo': [],  # 这是加载演示数据文件的相对路径列表。仅在创建数据库时启用了Demo Data标记时才会进行加载。

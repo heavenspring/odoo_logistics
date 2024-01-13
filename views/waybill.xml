@@ -20,6 +20,11 @@
         <field name="model">waybill</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button id="button_confirm" name="action_confirm" string="Confirm" class="btn-primary" states="1" type="object" confirm="Are you sure you want to confirm this record?"/>
+                    <button id="button_cancel" name="action_cancel" string="Cancel Confirm" class="btn-primary" states="2" type="object" confirm="Are you sure you want to cancel confirm this record?"/>
+                    <field name="state" widget="statusbar" statusbar_visible="1,2,3"/>
+                </header>
                 <sheet>
                     <h1>
                         <field name="goods_num_auto"/>
@@ -27,13 +32,13 @@
                     <group>
                         <group>
                             <separator string="Shipper Information"/>
-                            <field name="shipper_id"/>
-                            <field name="shipper_tel"/>
+                            <field name="shipper_id" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="shipper_tel" attrs="{'readonly': [('state', '=', '2')]}"/>
                         </group>
                         <group>
                             <separator string="Consignee Information"/>
-                            <field name="destination"/>
-                            <field name="receiver_id"/>
+                            <field name="destination" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="receiver_id" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
                             <field name="receiver_tel"/>
                             <field name="receiver_address"/>
 
@@ -43,29 +48,29 @@
                         <group>
                             <separator string="Option information"/>
 
-                            <field name="servicetype"/>
-                            <field name="paytype"/>
+                            <field name="servicetype" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="paytype" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
                         </group>
                         <group>
                             <separator string="Cost Information"/>
                             <field name="total_fees"/>
-                            <field name="receiving_fees"/>
-                            <field name="deliver_fees"/>
-                            <field name="substitute_fees"/>
-                            <field name="transfer_fees"/>
-                            <field name="load_unload_fees"/>
-                            <field name="guarantee_fees"/>
+                            <field name="receiving_fees" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="deliver_fees" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="substitute_fees" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="transfer_fees" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="load_unload_fees" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="guarantee_fees" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
                         </group>
                         <group>
                             <separator string="Other Information"/>
-                            <field name="collect_fees"/>
-                            <field name="refund"/>
-                            <field name="status"/>
+                            <field name="collect_fees" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="refund" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
+                            <field name="status" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}"/>
                         </group>
                     </group>
                     <notebook>
                         <page string="Waybill Details">
-                            <field name="detail_ids">
+                            <field name="detail_ids" attrs="{'readonly': ['|', ('state', '=', '2'), ('state', '=', '3')]}">
                                 <tree editable="bottom">
                                     <field name="goods_id"/>
                                     <field name="package_id"/>
@@ -94,14 +99,16 @@
             <tree>
                 <field name="goods_num_auto"/>
                 <field name="shipper_id"/>
-                 <field name="shipper_tel"/>
+                <field name="shipper_tel"/>
                 <field name="receiver_id"/>
                 <field name="receiver_tel"/>
                 <field name="destination"/>
-                <field name="total_fees"/>              
-                <field name="create_date"/>               
-                <field name="detail_ids"/>
                 <field name="status"/>
+                <field name="total_fees"/>
+                <field name="create_date"/>
+                <field name="detail_ids"/>
+                <field name="state" decoration-danger="state in ['1']" decoration-warning="state in ['2']" decoration-success="state in ['3']" widget="badge"/>
+
             </tree>
         </field>
     </record>
