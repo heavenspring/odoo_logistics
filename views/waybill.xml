@@ -84,6 +84,19 @@
                                 </tree>
                             </field>
                         </page>
+                        <page string="Trail">
+                            <field name="trail_ids" attrs="{'readonly': [('state', '=', '3')]}">
+                                <tree editable="bottom">
+                                    <field name="status"/>
+                                    <field name="departure_station"/>
+                                    <field name="destination_station"/>
+                                    <field name="type"/>
+                                    <field name="stay_type"/>
+                                    <field name="create_date"/>
+                                    <field name="description"/>
+                                </tree>
+                            </field>
+                        </page>
                     </notebook>
                 </sheet>
             </form>

@@ -1,8 +1,11 @@
+import logging
 from odoo import http
 from odoo.tools import config
 from odoo.exceptions import UserError, AccessError, AccessDenied
 import json
 import requests
+
+_logger = logging.getLogger(__name__)
 
 #odoo 控制器方法拦截
 def custom_decorator(func):
@@ -28,9 +31,12 @@ class Uniapi(http.Controller):#继承 odoo.http.Controller以通过Odoo路由系
             'code':200,
             'data':''
         }
-        #接收请求参数
+        # 获取当前请求的域名
+        current_domain = http.request.httprequest.host_url
+        # current_domain = 'https://wuliu.gardenengineer.club'
         json_data = http.request.params
-        url= "http://localhost:%s/web/session/authenticate" % config.get('http_port')
+        url= "%s/web/session/authenticate" % current_domain
+        _logger.info("current_domain: %s", current_domain)
         data = {
             "params": {
                 "db": "erp",
