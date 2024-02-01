@@ -7,7 +7,7 @@
 - 微信公众号： 菜园工程师
 - 小程序： 账号：wuliu@163.com 密码：123456
 
-![image.png](static/images/QRcode.jpg)  ![image.png](static/images/tiyan.jpg)
+![image.png](static/images/caiyuan.jpg)  ![image.png](static/images/tiyan.jpg)
 
 
 ## 2024-02-01
