@@ -86,6 +86,7 @@ class Waybill(models.Model):
     write_date = fields.Datetime(string='Last Updated on', readonly=True, copy=False)
 
     detail_ids = fields.One2many('waybill.detail', 'waybill_id', string='Waybill Details')
+    trail_ids=fields.One2many('trail','waybill_id')
 
     state = fields.Selection([('1','Draft'),
                               ('2','Confirmed'),
@@ -93,10 +94,19 @@ class Waybill(models.Model):
     
 
     def action_confirm(self):
+        status='1'
+        select_des=dict(self.env['trail'].fields_get(allfields=['status'])['status']['selection']).get(status, '')
+        trail = self.env['trail'].create({
+            'waybill_id': self.id,
+            'status': status,
+            'description':select_des
+        })
         self.state='2'
+       
 
         
     def action_cancel(self):
+        self.env['trail'].search([('waybill_id', '=', self.id)]).unlink()
         self.state = '1'
 
 
@@ -145,6 +155,19 @@ class Waybill(models.Model):
             waybill.total_fees = sum(waybill.detail_ids.mapped('total_freight'))
 
 
+
+    @api.model
+    def create(self, values):
+        # 在创建记录之前执行一些操作
+        # 例如，你可以检查一些条件，添加一些默认值，等等
+        test=1
+        # 调用原始的create方法来执行实际的创建操作
+        new_record = super(Waybill, self).create(values)
+        test=12
+        # 在创建记录之后执行一些操作
+        # 例如，你可以触发其他动作，发送通知等等
+
+        return new_record
 
 
 

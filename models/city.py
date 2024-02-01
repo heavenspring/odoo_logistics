@@ -12,9 +12,15 @@ class City(models.Model):
 
     def name_get(self):  # 重写name_get()方法
         result = []
+
         for record in self:
             rec_name = "%s[%s]" % (record.city_name, record.partner_id.name)
             result.append((record.id, rec_name))
+            # if record.context_info:
+            #     rec_name = "%s[%s]" % (record.city_name, record.partner_id.name)
+            #     result.append((record.id, rec_name))
+            # else:
+            #     result.append(super(City, record).name_get()[0])       
         return result
 
     @api.constrains('city_name')

@@ -48,10 +48,21 @@ class ShippingDocument(models.Model):
     
     
     def action_confirm(self):
+        status='2'      
+        select_des=dict(self.env['trail'].fields_get(allfields=['status'])['status']['selection']).get(status, '')
+        for item in self.detail_ids:
+            trail_vals = {
+                'waybill_id': item.waybill_id.id,
+                'status': status,
+                'description':select_des
+            }
+            trail = self.env['trail'].create(trail_vals)  
         self.state='2'
 
         
     def action_cancel(self):
+        ids= self.detail_ids.mapped('waybill_id').ids
+        self.env['trail'].search([('waybill_id', 'in', ids),('status', '=', '2')]).unlink()
         self.state = '1'
 
 

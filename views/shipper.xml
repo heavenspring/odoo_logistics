@@ -16,6 +16,7 @@
     <record id="shipper_view_form" model="ir.ui.view">
         <field name="name">shipper.form</field>
         <field name="model">shipper</field>
+        
         <field name="arch" type="xml">
             <form>
                 <sheet>

@@ -21,3 +21,5 @@ access_shipping_document_manager,access.shipping.document.manager,model_shipping
 access_shipping_document_user,access.shipping.document.user,model_shipping_document,groups_logistic_user,1,1,1,0
 access_shipping_document_detail_manager,access.shipping.document.detail.manager,model_shipping_document_detail,groups_logistic_manager,1,1,1,1
 access_shipping_document_detail_user,access.shipping.document.detail.user,model_shipping_document_detail,groups_logistic_user,1,1,1,0
+access_trail_manager,access.trail.manager,model_trail,groups_logistic_manager,1,1,1,1
+access_trail_user,access.trail.user,model_trail,groups_logistic_user,1,1,1,0

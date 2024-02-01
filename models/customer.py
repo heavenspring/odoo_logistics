@@ -8,6 +8,7 @@ class Shipper(models.Model):
 
     shipper_name = fields.Char(string='Shipper Name', required=True)
     tel=fields.Char(string='Phone', required=True)
+
     
 class receiver(models.Model):
     _name = 'receiver'
