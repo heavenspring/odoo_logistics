@@ -15,7 +15,7 @@
 - qweb报表
 - pdf打印
 
-![image.png](static/images/yundan.gif)
+![image.png](static/images/report_print.gif)
 
 
 
