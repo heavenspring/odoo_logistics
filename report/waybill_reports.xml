@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Main report templates -->
+    <template id="report_waybill">
+        <t t-foreach="docs" t-as="waybill">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>
+                            <span t-field="waybill.goods_num_auto"/>
+                        </h2>
+                        <div>
+                            <strong>Shipper: </strong>
+                            <span t-field="waybill.shipper_id"/>
+                        </div>
+                        <t t-call="odoo_logistics.report_waybill_detail_info"/>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Sub-template -->
+    <template id="report_waybill_detail_info">
+        <div>
+            <strong>Consignee: </strong>
+            <span t-field="waybill.receiver_id"/>
+        </div>
+        <div>
+            <strong>Consignee Phone: </strong>
+            <span t-field="waybill.receiver_tel"/>
+        </div>
+        <table class="table" t-if="waybill.detail_ids">
+            <thead>
+                <tr>
+                    <th>Goods Name</th>
+                    <th>Package</th>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-set="details" t-value="waybill.mapped('detail_ids')"/>
+                <tr t-foreach="details" t-as="detail">
+                    <td>
+                        <span t-field="detail.goods_id"/>
+                    </td>
+                    <td>
+                        <span t-field="detail.package_id"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <strong t-else="">No details have been made yet :(</strong>
+    </template>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_waybill" model="ir.actions.report">
+            <field name="name">Waybill(PDF)</field>
+            <field name="model">waybill</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">odoo_logistics.report_waybill</field>
+            <field name="report_file">odoo_logistics.report_waybill</field>
+            <field name="print_report_name">'Waybills'</field>
+            <field name="binding_model_id" ref="model_waybill"/>
+        </record>
+    </data>
+</odoo>
