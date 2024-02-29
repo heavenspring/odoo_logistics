@@ -5,7 +5,7 @@
     'description': """ An open source, simple and user-friendly logistics information management system """,  # 长描述，通常放在三个引号中，Python中使用三个引号来界定多行文本
     'License': 'LGPL-3',  # 默认值为LGPL-3。这一标识符用于模块对外使用的证书。其它可用的证书有AGPL-3、Odoo自有证书v1.0（多用于付费应用）以及其它OSI核准的证书。
     # 这是该模块所直接依赖的模块技术名称列表。如果你的模块不依赖于任何其它插件模块，那么应至少添加一个base模块。别忘记包含这个模块所引用的XML ID、视图或模块的定义模型。那样可确保它们以正确的顺序进行加载，避免难以调试的错误。
-    'depends': ['base', 'mail'],
+    'depends': ['base', 'mail','web'],
 
     'data': [
         'security/logistics_security.xml',
@@ -19,7 +19,9 @@
         'views/shipper.xml',
         'views/driver.xml',
         'views/shipping_document.xml',
-        'views/menu.xml'
+        'views/menu.xml',
+        "report/waybill_reports.xml",
+        "report/waybill_report_views.xml",
     ],  # 这是在模块安装或升级时需加载数据文件的相对路径列表。这些路径相对于模块的根目录。通常，这些是XML和CSV文件，但也可以使用YAML格式的数据文件
     'demo': [],  # 这是加载演示数据文件的相对路径列表。仅在创建数据库时启用了Demo Data标记时才会进行加载。
     'qweb': [],

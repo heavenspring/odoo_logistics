@@ -9,6 +9,15 @@
 
 ![image.png](static/images/QRcode.jpg)  ![image.png](static/images/tiyan.jpg)
 
+## 2024-02-29
+1.运单报表及打印
+
+- qweb报表
+- pdf打印
+
+![image.png](static/images/yundan.gif)
+
+
 
 ## 2024-02-01
 1.运单物流轨迹
